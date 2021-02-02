@@ -1,0 +1,30 @@
+{
+  "name": "icinga2-burrow-plugin",
+  "version": "1.0.0",
+  "description": "An Icinga2 Plugin to monitor the total lag on all consumers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egodigital/icinga2-burrow-plugin.git"
+  },
+  "keywords": [
+    "icinga2",
+    "burrow",
+    "lag",
+    "kafka",
+    "consumer"
+  ],
+  "author": "Eric Kesseler",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/egodigital/icinga2-burrow-plugin/issues"
+  },
+  "homepage": "https://github.com/egodigital/icinga2-burrow-plugin#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "minimist": "^1.2.5"
+  }
+}
