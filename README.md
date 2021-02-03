@@ -6,7 +6,7 @@ A plugin for Icinga2 to access the [Burrow API](https://github.com/linkedin/Burr
 2. Warning threshold
 3. Critical threshold
 
-It returns a message in a Icinga2 supported format: `OK - ..., WARNING - ..., CRITIAL - ...`
+It returns a message in a Icinga2 supported format: `OK - ..., WARNING - ..., CRITICAL - ...`
 
 Check out their [wiki](https://github.com/linkedin/Burrow/wiki) for more information about the API ressources used by the script.
 
@@ -16,6 +16,7 @@ You have to clone the plugin e.g. in the `/usr/lib/nagios/plugins` folder and in
 
 ```
 git clone https://github.com/egodigital/icinga2-burrow-plugin.git
+cd icinga2-burrow-plugin
 npm install
 ```
 
