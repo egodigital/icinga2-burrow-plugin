@@ -1,12 +1,14 @@
 # icinga2-burrow-plugin
 
-A plugin for Icinga2 to access the [Burrow API](https://github.com/carrot/burrow) to get a total count of unread messages (lag) of all consumers in all clusters. The plugin supports three parameters:
+A plugin for Icinga2 to access the [Burrow API](https://github.com/linkedin/Burrow) to get a total count of unread messages (lag) of all consumers in all clusters. The plugin supports three parameters:
 
 1. Burrow API Base URL e.g. http://1.2.3.4:9991/v3
 2. Warning threshold
 3. Critical threshold
 
 It returns a message in a Icinga2 supported format: `OK - ..., WARNING - ..., CRITIAL - ...`
+
+Check out their [wiki](https://github.com/linkedin/Burrow/wiki) for more information about the API ressources used by the script.
 
 ## Usage
 
