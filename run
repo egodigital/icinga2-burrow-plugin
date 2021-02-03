@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+# This file is part of the icinga2-burrow-plugin distribution.
+# Copyright (c) e.GO Digital GmbH, Aachen, Germany (https://www.e-go-digital.com/)
+#
+# icinga2-burrow-plugin is free software: you can redistribute it and/or modify
+# it under the terms of the GNU Lesser General Public License as
+# published by the Free Software Foundation, version 3.
+#
+# icinga2-burrow-plugin is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public License
+# along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+while getopts ":u:w:c:" opt; do
+  case $opt in
+    u) url="$OPTARG"
+    ;;
+    w) warning_threshold="$OPTARG"
+    ;;
+    c) critical_threshold="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    ;;
+  esac
+done
+
+/usr/bin/node /usr/lib/nagios/plugins/icinga2-burrow-plugin/index.js $url $warning_threshold $critical_threshold

@@ -1,3 +1,20 @@
+/**
+ * This file is part of the icinga2-burrow-plugin distribution.
+ * Copyright (c) e.GO Digital GmbH, Aachen, Germany (https://www.e-go-digital.com/)
+ *
+ * icinga2-burrow-plugin is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation, version 3.
+ *
+ * icinga2-burrow-plugin is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 var argv = require('minimist')(process.argv.slice(2));
 if (argv._.length < 3) {
     console.error('The script needs three mandatory parameters: 1. Burrow API Base URL e.g. http://1.2.3.4:9991/v3, 2. Warning threshold, 3. Critical threshold');
@@ -37,5 +54,3 @@ if (argv._.length < 3) {
         }
     })();
 }
-
-
