@@ -18,7 +18,7 @@
     "consumer"
   ],
   "author": "Eric Kesseler",
-  "license": "LGPL-3.0",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/egodigital/icinga2-burrow-plugin/issues"
   },
