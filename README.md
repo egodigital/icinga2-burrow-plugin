@@ -5,6 +5,7 @@ A plugin for Icinga2 to access the [Burrow API](https://github.com/linkedin/Burr
 1. Burrow API Base URL e.g. http://1.2.3.4:9991/v3
 2. Warning threshold
 3. Critical threshold
+4. Excluded consumer groups (comma separated)
 
 It returns a message in a Icinga2 supported format: `OK - ..., WARNING - ..., CRITICAL - ...`
 

@@ -16,7 +16,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 
-while getopts ":u:w:c:" opt; do
+while getopts ":u:w:c:e:" opt; do
   case $opt in
     u) url="$OPTARG"
     ;;
@@ -24,9 +24,11 @@ while getopts ":u:w:c:" opt; do
     ;;
     c) critical_threshold="$OPTARG"
     ;;
+    e) excluded_consumers="$OPTARG"
+    ;;
     \?) echo "Invalid option -$OPTARG" >&2
     ;;
   esac
 done
 
-/usr/bin/node /usr/lib/nagios/plugins/icinga2-burrow-plugin/index.js $url $warning_threshold $critical_threshold
+/usr/bin/node /usr/lib/nagios/plugins/icinga2-burrow-plugin/index.js $url $warning_threshold $critical_threshold $excluded_consumers
