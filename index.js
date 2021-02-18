@@ -67,9 +67,10 @@ if (argv._.length < 3) {
                 process.exit(0);
             }
         } catch (error) {
-            console.log(error);
-            console.log('CRITICAL - An error occurred: ' + error);
-            process.exit(2);
+            if (error && error.response && error.response.status && error.response.status !== 404) {
+                console.log('CRITICAL - An error occurred: ' + error);
+                process.exit(2);
+            }
         }
     })();
 }

@@ -31,4 +31,7 @@ while getopts ":u:w:c:e:" opt; do
   esac
 done
 
-/usr/bin/node /usr/lib/nagios/plugins/icinga2-burrow-plugin/index.js $url $warning_threshold $critical_threshold $excluded_consumers
+node_bin=$(which node)
+script_dir="$( cd "$( dirname "$0" )" && pwd )"
+
+$node_bin $script_dir/index.js $url $warning_threshold $critical_threshold $excluded_consumers

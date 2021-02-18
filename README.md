@@ -28,9 +28,10 @@ object CheckCommand "check_kafka_lag" {
   command = [ PluginDir + "/icinga2-burrow-plugin/run" ]
 
   arguments = {
-    "-u" = "http://1.2.3.4:9991/v3"
-    "-w" = "10000"
-    "-c" = "50000"
+    "-u" = "$burrow_base_url$"
+    "-w" = "$warning_threshold$"
+    "-c" = "$critical_threshold$"
+    "-e" = "$excluded_consumer_groups$"
   }
 }
 ```
@@ -45,6 +46,11 @@ object Host "some-host" {
   check_command = "check_kafka_lag"
 
   vars.os = "Linux"
+
+  vars.burrow_base_url = "http://1.2.3.4:9991/v3"
+  vars.warning_threshold = "10000"
+  vars.critical_threshold = "50000"
+  vars.excluded_consumer_groups = "some_consumer_group"
 }
 ```
 
