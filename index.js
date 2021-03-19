@@ -57,13 +57,13 @@ if (argv._.length < 3) {
             const warningThreshold = argv._[1];
             const errorThreshold = argv._[2];
             if (totalLag >= errorThreshold) {
-                console.log('CRITICAL - The total lag of unread messages is currently ' + totalLag + ' and above ' + errorThreshold);
+                console.log('CRITICAL - The total lag of unread messages is currently ' + totalLag + ' and above ' + errorThreshold + '|totalLag=' + totalLag);
                 process.exit(2);
             } else if (totalLag >= warningThreshold) {
-                console.log('WARNING - The total lag of unread messages is currently ' + totalLag + ' and above ' + warningThreshold);
+                console.log('WARNING - The total lag of unread messages is currently ' + totalLag + ' and above ' + warningThreshold + '|totalLag=' + totalLag);
                 process.exit(1);
             } else {
-                console.log('OK - The total lag of unread messages is ' + totalLag);
+                console.log('OK - The total lag of unread messages is ' + totalLag + '|totalLag=' + totalLag);
                 process.exit(0);
             }
         } catch (error) {
